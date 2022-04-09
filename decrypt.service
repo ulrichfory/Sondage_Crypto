@@ -1,0 +1,11 @@
+[Unit]
+Description= crypter un message
+After=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/decrypt.sh
+[Install]
+WantedBy=multi-user.target
+
